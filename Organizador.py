@@ -51,7 +51,7 @@ def main(folder):
         elif arquivo.lower().endswith(".mp3") or arquivo.lower().endswith(".wav"):
             print(arquivo)
             shutil.move(os.path.join(folder, arquivo), os.path.join(audio,arquivo))
-        elif arquivo.lower().endswith(".mp4") or arquivo.lower().endswith(".wav") or arquivo.lower().endswith(".mov"):
+        elif arquivo.lower().endswith(".mp4") or arquivo.lower().endswith(".wmv") or arquivo.lower().endswith(".mov"):
             print(arquivo)
             shutil.move(os.path.join(folder, arquivo), os.path.join(video,arquivo))
         elif arquivo.lower().endswith(".jpg") or arquivo.lower().endswith(".jpeg") or arquivo.lower().endswith(".jfif") or arquivo.lower().endswith(".png"):
