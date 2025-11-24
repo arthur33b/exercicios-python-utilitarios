@@ -18,6 +18,7 @@ def criar_pastas(folder):
 
 
 def main(folder):
+    criar_pastas(folder)
     os.chdir(folder)
     lista_arquivos = os.listdir(folder)
     txt = os.path.join(folder,"TXT")
@@ -35,7 +36,7 @@ def main(folder):
         if arquivo.lower().endswith(".txt"):
             print(arquivo)
             shutil.move(os.path.join(folder, arquivo), os.path.join(txt, arquivo))
-        elif arquivo.lower().endswith(".pdf"):
+        elif arquivo.lower().endswith(".pdf") :
             print(arquivo)
             shutil.move(os.path.join(folder, arquivo), os.path.join(pdf,arquivo))
         elif arquivo.lower().endswith(".json"):
@@ -44,4 +45,17 @@ def main(folder):
         elif arquivo.lower().endswith(".xlsx") or arquivo.lower().endswith(".csv"):
             print(arquivo)
             shutil.move(os.path.join(folder, arquivo), os.path.join(xlsx,arquivo))
-
+        elif arquivo.lower().endswith(".doc") or arquivo.lower().endswith(".docx"):
+            print(arquivo)
+            shutil.move(os.path.join(folder, arquivo), os.path.join(doc,arquivo))
+        elif arquivo.lower().endswith(".mp3") or arquivo.lower().endswith(".wav"):
+            print(arquivo)
+            shutil.move(os.path.join(folder, arquivo), os.path.join(audio,arquivo))
+        elif arquivo.lower().endswith(".mp4") or arquivo.lower().endswith(".wav") or arquivo.lower().endswith(".mov"):
+            print(arquivo)
+            shutil.move(os.path.join(folder, arquivo), os.path.join(video,arquivo))
+        elif arquivo.lower().endswith(".jpg") or arquivo.lower().endswith(".jpeg") or arquivo.lower().endswith(".jfif") or arquivo.lower().endswith(".png"):
+            print(arquivo)
+            shutil.move(os.path.join(folder, arquivo), os.path.join(img,arquivo))
+pasta = escolher_pasta()
+main(pasta)
